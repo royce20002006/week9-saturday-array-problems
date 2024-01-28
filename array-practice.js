@@ -2,15 +2,15 @@ const findMinimum = arr => {
   let smallest = arr[0];
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] < smallest) smallest = arr[i];
-    
+
   }
   return smallest;
-  
-  
+
+
 };
 
 const runningSum = arr => {
-  
+
   for (let i = 1; i < arr.length; i++) {
     arr[i] = arr[i - 1] + arr[i];
   }
@@ -30,18 +30,24 @@ const evenNumOfChars = arr => {
   // Your code here 
 };
 
-const smallerThanCurr = arr => {
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    
-  }
- 
 
+const smallerThanCurr = arr => {
+  let result = []
+  for (const number of arr) {
+    let counter = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < number) counter++;
+    }
+    result.push(counter);
+  }
+  return result;
 };
 
-const twoSum = (arr, target) => {
 
-  // Your code here 
+
+const twoSum = (arr, target) => {
+ 
+ 
 };
 
 const secondLargest = arr => {
