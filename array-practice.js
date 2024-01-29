@@ -57,13 +57,21 @@ const twoSum = (arr, target) => {
 
 const secondLargest = arr => {
 
-  // Your code here 
+  arr.sort();
+  return arr[arr.length - 2]
 };
 
 const shuffle = (arr) => {
+  const shuffledArray = [...arr];
 
-  // Your code here 
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[i]];
+  }
+
+  return shuffledArray;
+
+
 };
-
 
 module.exports = [findMinimum, runningSum, evenNumOfChars, smallerThanCurr, twoSum, secondLargest, shuffle];
